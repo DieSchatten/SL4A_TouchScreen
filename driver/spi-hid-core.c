@@ -242,7 +242,7 @@ module_param(win_handshake, bool, 0444);
 MODULE_PARM_DESC(win_handshake,
 	"Raw mode: Windows HeatCore enable (GET 6 + SET 5=1), no idle watchdog/poller");
 
-/* Send HeatCore's GET 6 before SET 5. On a Surface Laptop 4 AMD 15" (MSHW0231)
+/* Send HeatCore's GET 6 before SET 5. On a Surface Laptop 4 AMD 13.5" (MSHW0231)
  * the panel resets itself ~110 ms after a SET 5 that follows GET 6 under Linux,
  * and streams when SET 5 goes out right after 0x56: use win_get6=0 there. */
 static bool win_get6 = true;
